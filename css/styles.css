@@ -1,0 +1,169 @@
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("../fonts/PressStart2P-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+    background-color: #ffe6e6;
+    margin: 0;
+}
+
+.contenedor-juego {
+    display: block;
+    height: 100%;
+    padding: 10px;
+    width: 100%;
+}
+
+.titulo-juego {
+    background-color: pink;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px black;
+    color: white;
+    display: block;
+    font-family: "Press Start 2P", cursive;
+    font-size: 32px;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 40%;
+}
+
+.pantalla-juego {
+    border-color: pink;
+    border-radius: 12px;
+    border-style: solid;
+    border-width: 10px;
+    box-shadow: 0px 4px 8px black;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    width: 40%;
+}
+
+.botonera-juego {
+    background-color: pink;
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px black;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+    padding: 10px;
+    width: 40%;
+}
+
+.botonera-juego table {
+    height: 100%;
+    width: 100%;
+}
+
+.botonera-juego td {
+    text-align: center;
+}
+
+.botonera-juego a {
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px black;
+    color: white;
+    font-family: "Press Start 2P", cursive;
+    font-size: 18px;
+    display: inline-block;
+    margin: 10 50px;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+#boton-comenzar {
+    background-color: blue;
+}
+
+#boton-instrucciones, #boton-reintentar, #boton-volver {
+    background-color: gray;
+}
+
+#boton-rechazar {
+    background-color: red;
+}
+
+#boton-aceptar {
+    background-color: green;
+}
+
+.instrucciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.instrucciones h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.instrucciones table {
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px black;
+}
+
+.instrucciones th {
+    background: white;
+    color: #333;
+    text-align: center;
+    padding: 12px 16px;
+    font-size: 18px;
+}
+
+.instrucciones td {
+    padding: 12px 16px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+    line-height: 1.4;
+}
+
+.instrucciones tr:nth-child(even) td {
+    background: #f5b7b1;
+}
+
+.instrucciones tr:nth-child(odd) td {
+    background: #a9dfbf;
+}
+
+.instrucciones tr:last-child td {
+    border-bottom: none;
+}
+
+.instrucciones td img {
+    width: 60px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+
+
+.resaltado {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/*
+selectores:
+1. tipo(etiqueta) -body
+2. clase(class="") -para varios elementos
+3. id(id="") -para un solo elemento
+
+las propiedades se sobreescriben a medida que baja el pc
+id > clase > tipo
+*/
