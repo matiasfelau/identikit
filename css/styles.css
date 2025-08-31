@@ -1,169 +1,162 @@
-@font-face {
-  font-family: "Press Start 2P";
-  src: url("../fonts/PressStart2P-Regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
-
 body {
-    background-color: #ffe6e6;
+    background-image: url('../img/fondo.gif');
+    background-size: cover;
     margin: 0;
+    padding: 0;
 }
 
-.contenedor-juego {
-    display: block;
-    height: 100%;
-    padding: 10px;
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-}
-
-.titulo-juego {
-    background-color: pink;
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px black;
-    color: white;
-    display: block;
-    font-family: "Press Start 2P", cursive;
-    font-size: 32px;
-    margin: auto;
-    margin-top: 10px;
-    padding: 10px;
-    text-align: center;
-    width: 40%;
-}
-
-.pantalla-juego {
-    border-color: pink;
-    border-radius: 12px;
-    border-style: solid;
-    border-width: 10px;
-    box-shadow: 0px 4px 8px black;
-    display: block;
-    margin: auto;
-    margin-top: 10px;
-    width: 40%;
-}
-
-.botonera-juego {
-    background-color: pink;
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px black;
-    display: block;
-    margin: auto;
-    margin-top: 10px;
-    padding: 10px;
-    width: 40%;
-}
-
-.botonera-juego table {
     height: 100%;
-    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: -1;
 }
 
-.botonera-juego td {
-    text-align: center;
-}
-
-.botonera-juego a {
+.encabezado {
+    background-color: rgba(255, 192, 203, 0.7);
     border-radius: 12px;
-    box-shadow: 0px 4px 8px black;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    display: table;
+    margin: auto;
+    margin-top: 40px;
+    overflow: hidden;
+    padding: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 60%;
+}
+
+.encabezado:hover {
+    transform: scale(1.03);
+}
+
+.encabezado h1 {
     color: white;
-    font-family: "Press Start 2P", cursive;
-    font-size: 18px;
+    display: table-cell;
+    font-family: 'Arial', sans-serif;
+    font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    vertical-align: middle;
+}
+
+.encabezado ul {
+    display: table-cell;
+    list-style-type: none;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.encabezado li {
     display: inline-block;
-    margin: 10 50px;
+    margin: 0 10px;
+}
+
+.encabezado a {
+    background-color: rgba(255, 192, 203, 0.5);
+    border-bottom: 3px solid gray;
+    border-radius: 12px;
+    color: white;
+    display: inline-block;
+    font-family: 'Verdana', sans-serif;
+    font-size: 18px;
     padding: 10px;
     text-align: center;
     text-decoration: none;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-#boton-comenzar {
-    background-color: blue;
+.encabezado a:hover,
+.encabezado a.activo {
+    background-color: rgba(255, 192, 203, 0.7);
+    border-bottom-color: aqua;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
 }
 
-#boton-instrucciones, #boton-reintentar, #boton-volver {
-    background-color: gray;
-}
-
-#boton-rechazar {
-    background-color: red;
-}
-
-#boton-aceptar {
-    background-color: green;
-}
-
-.instrucciones {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-}
-
-.instrucciones h2 {
-    margin-bottom: 15px;
-    font-size: 24px;
-    color: #333;
-    text-align: center;
-}
-
-.instrucciones table {
-    border-collapse: collapse;
-    width: 80%;
-    max-width: 900px;
-    background: #fff;
-    border-radius: 10px;
+.cuerpo {
+    background-color: rgba(255, 192, 203, 0.7);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    display: table;
+    margin: auto;
+    margin-top: 40px;
     overflow: hidden;
-    box-shadow: 0px 4px 8px black;
+    padding: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 60%;
 }
 
-.instrucciones th {
-    background: white;
-    color: #333;
-    text-align: center;
-    padding: 12px 16px;
-    font-size: 18px;
+.cuerpo:hover {
+    transform: scale(1.03);
 }
 
-.instrucciones td {
-    padding: 12px 16px;
-    border-bottom: 1px solid #eee;
-    vertical-align: middle;
-    line-height: 1.4;
-}
-
-.instrucciones tr:nth-child(even) td {
-    background: #f5b7b1;
-}
-
-.instrucciones tr:nth-child(odd) td {
-    background: #a9dfbf;
-}
-
-.instrucciones tr:last-child td {
-    border-bottom: none;
-}
-
-.instrucciones td img {
-    width: 60px;
+.cuerpo img {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: table-cell;
     height: auto;
+    margin-right: 20px;
+    width: 250px;
+}
+
+.texto {
+    display: table-cell;
+    padding-left: 20px;
+    vertical-align: middle;
+}
+
+.texto h2 {
+    color: white;
     display: block;
-    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    font-size: 28px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-
-
-.resaltado {
-    background-color: yellow;
-    font-weight: bold;
+.texto p {
+    color: white;
+    display: block;
+    font-family: 'Verdana', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
 }
 
-/*
-selectores:
-1. tipo(etiqueta) -body
-2. clase(class="") -para varios elementos
-3. id(id="") -para un solo elemento
+.pie {
+    background-color: rgba(255, 192, 203, 0.7);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    display: table;
+    margin: auto;
+    margin-top: 40px;
+    overflow: hidden;
+    padding: 20px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    width: 60%;
+}
 
-las propiedades se sobreescriben a medida que baja el pc
-id > clase > tipo
-*/
+.pie:hover {
+    transform: scale(1.03);
+}
+
+.pie a {
+    display: table-cell;
+    text-align: center;
+    text-decoration: none;
+    width: 50%;
+}
+
+.pie img {
+    height: auto;
+    width: 50px;
+}
+
+.pie .steam {
+    height: auto;
+    width: 90px;
+}
