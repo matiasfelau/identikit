@@ -183,6 +183,10 @@ body::before {
     transform: translateX(5px);
 }
 
+.resaltado {
+    color: aqua;
+}
+
 .pie {
     background-color: rgba(255, 192, 203, 0.7);
     border-radius: 12px;
@@ -319,7 +323,9 @@ body::before {
     border-radius: 8px;
     box-shadow: 0 6px 12px rgba(0,0,0,0.4);
     display: block;
+    height: 280px;
     margin: 0 auto;
+    object-fit: cover;
 }
 .menu-lateral li a.activo {
     background: rgba(255, 192, 203, 0.8); 
